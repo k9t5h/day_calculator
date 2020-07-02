@@ -6,6 +6,7 @@ NOT_SCHOOL = "not-school"
 
 def calculate_day_type(date):
     """Return the type of a day for a student
+
     Parameters:
     date (datetime): A day to calculate the type of
     
