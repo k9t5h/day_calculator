@@ -25,13 +25,15 @@ def calculate_day_type(date):
     week_number = date.isocalendar()[1]
     if week_number % 2 == 0:
         school_days = calculate_school_days(date, date_list, 0, 17)
+        print('TW week for group A')
         if date in school_days:
-            return f"TW week for group A: {SCHOOL}"
+            return SCHOOL
         else:
-            return f"TW week for group A: {NOT_SCHOOL}"
+            return NOT_SCHOOL
     else:
         school_days = calculate_school_days(date, date_list, 7, 24)
+        print('TW week for group B')
         if date in school_days:
-            return f"TW week for group B: {SCHOOL}"
+            return SCHOOL
         else:
-            return f"TW week for group B: {NOT_SCHOOL}"
+            return NOT_SCHOOL
